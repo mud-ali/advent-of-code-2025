@@ -10,8 +10,13 @@ with open(filename, 'r') as file:
     for line in lines:
         amt = int(line[1:])
         dir = -1 if line[0]=="L" else 1
-        val = (val + (dir * amt)) % 100
-        if val == 0: count += 1
+        while amt > 0:
+            val += dir
+            val %= 100
+            if val == 0:
+                count += 1
+            amt -= 1
+        
 
     
 
