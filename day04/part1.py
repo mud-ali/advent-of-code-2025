@@ -13,8 +13,6 @@ def check_spot(lines : List[str], i,j) -> int:
     n=0
     max_x = len(lines)
     max_y = len(lines[0])
-    # if i in (0,max_x) and j in (0,max_y): #corner
-    #     return 1
     dirs = [(-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1)]
     assert len(dirs)==8
     for d in dirs:

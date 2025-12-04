@@ -28,7 +28,6 @@ found = False
 with open(filename, 'r') as file:
     lines = [list(a) for a in file.read().split("\n")]
     while first or found:
-        # for l in lines: print(l)
         first = False
         found = False
         for i,lin in enumerate(lines):
